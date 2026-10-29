@@ -1,5 +1,5 @@
 # Occupational-medicine-AI-helper
-# Paweł Zakrzewski & Hubert Zalewski
+### Paweł Zakrzewski & Hubert Zalewski
 
 Pracownicy kierowani na badania medycyny pracy często nie wiedzą, jakie konkretnie badania muszą wykonać oraz jak się do nich przygotować, co generuje ogromną liczbę telefonów do przychodni. 
 
