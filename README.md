@@ -1,4 +1,6 @@
 # Occupational-medicine-AI-helper
+# Paweł Zakrzewski & Hubert Zalewski
+
 Pracownicy kierowani na badania medycyny pracy często nie wiedzą, jakie konkretnie badania muszą wykonać oraz jak się do nich przygotować, co generuje ogromną liczbę telefonów do przychodni. 
 
 Prezentujemy zatem ZbadAI™ - agenta AI, który pomoże pacjentom przygotować się do wizyty i odciąży personel w placówce.
