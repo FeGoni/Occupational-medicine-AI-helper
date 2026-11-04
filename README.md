@@ -1,12 +1,28 @@
-# Occupational-medicine-AI-helper
-### Paweł Zakrzewski & Hubert Zalewski
+# ZbadAI
 
-Pracownicy kierowani na badania medycyny pracy często nie wiedzą, jakie konkretnie badania muszą wykonać oraz jak się do nich przygotować, co generuje ogromną liczbę telefonów do przychodni. 
+**Autorzy:**
+- Hubert Zalewski
+- Paweł Zakrzewski
 
-Prezentujemy zatem ZbadAI™ - agenta AI, który pomoże pacjentom przygotować się do wizyty i odciąży personel w placówce.
+**Grupa:** _do uzupełnienia_
 
-Pacjent może przesłać swoje skierowanie lub zapytać o wpisane na nim czynniki szkodliwe i niebezpieczne (np. praca przy monitorze, na wysokości czy prowadzenie pojazdów), aby dowiedzieć się, jakich dokładnie lekarzy musi odwiedzić i jak przygotować się do wizyty (np. czy musi przyjść na czczo). Może też sprawdzić, ile orientacyjnie potrwa cała wizyta lub ile kosztują poszczególne badania.
+Agent AI dla pacjentów przychodni medycyny pracy (placówka fikcyjna): na podstawie czynników ze skierowania podpowiada, jakie badania obejmuje wizyta i jak się do niej przygotować. Pełna wizja: [docs/wizja.md](docs/wizja.md).
 
-Asystent zna aktualny grafik lekarzy oraz obecnie zarejestrowanych pacjentów w przychodni, dzięki czemu wskaże najbliższy dogodny termin, w którym pacjent wykona wszystkie wymagane badania podczas jednej wizyty, i pozwoli na jego rezerwację.
+## Uruchomienie
 
-Pracownicy przychodni mogą dzielić się wiedzą o wewnętrznych procedurach placówki, uzupełniając wytyczne i informacje organizacyjne, z których korzystają pacjenci.
+Wymagania: .NET 10 SDK oraz [Ollama](https://ollama.com/download).
+
+```powershell
+ollama pull qwen3:8b
+dotnet run --project src/ZbadAI
+```
+
+Potem otwórz adres podany w konsoli (domyślnie http://localhost:5266).
+
+Model ustawia się w `src/ZbadAI/appsettings.json` (sekcja `Model`). Żeby użyć API zgodnego z OpenAI (np. PLGrid), wpisz `Endpoint` (np. `https://llm.hpc.psnc.pl/v1`) i nazwę modelu, a klucz ustaw w zmiennej środowiskowej:
+
+```powershell
+$env:LLM_API_KEY = "..."
+```
+
+Instrukcje agenta: `src/ZbadAI/Prompts/system-prompt.md`. Kontekst (wyciąg z rozporządzenia i informacje przychodni): `src/ZbadAI/Knowledge/`. Po zmianie tych plików zrestartuj aplikację.
