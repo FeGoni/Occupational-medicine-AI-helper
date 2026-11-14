@@ -5,7 +5,7 @@
 - Paweł Zakrzewski
 
 
-Agent AI dla pacjentów przychodni medycyny pracy (placówka fikcyjna): na podstawie czynników ze skierowania podpowiada, jakie badania obejmuje wizyta i jak się do niej przygotować. Pełna wizja: [docs/wizja.md](docs/wizja.md).
+Agent AI dla pacjentów przychodni medycyny pracy: na podstawie czynników ze skierowania podpowiada, jakie badania obejmuje wizyta i jak się do niej przygotować. Pełna wizja: [docs/wizja.md](docs/wizja.md).
 
 ## Uruchomienie
 
