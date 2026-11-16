@@ -6,6 +6,7 @@
 
 
 Agent AI dla pacjentów przychodni medycyny pracy: na podstawie czynników ze skierowania podpowiada, jakie badania obejmuje wizyta i jak się do niej przygotować. Pełna wizja: [docs/wizja.md](docs/wizja.md).
+Plan architektury: [docs/architecture.md](docs/Architecture.md).
 
 ## Uruchomienie
 
